@@ -47,7 +47,7 @@ const Header: FC = () => {
           alt="avatar"
           className="rounded-[50%] mr-4 h-[40px]"
         />
-        <div className="font-[400] md:text-[20px] md:tracking-[5px] tracking-[2px] uppercase">
+        <div className="font-[400] md:text-[20px] tracking-[2px] uppercase">
           Hasnain Ali
         </div>
       </div>
