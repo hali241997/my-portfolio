@@ -3,7 +3,7 @@ import { default as QuoteSvg } from "icons/Quote";
 
 const Quote: FC = () => {
   return (
-    <div className="py-[calc(30vh)] lg:py-[calc((100vh-200px)/2)] flex flex-col items-center ">
+    <div className="py-[calc(20vh)] lg:py-[calc(50vh)] flex flex-col items-center">
       <div className="mb-[70px] lg:mb-[40px]">
         <QuoteSvg />
       </div>
