@@ -8,7 +8,7 @@ const Quote: FC = () => {
         <QuoteSvg />
       </div>
 
-      <div className="text-[30px] md:text-[40px] mb-[20px] italic text-center">
+      <div className="text-[30px] md:text-[40px] mb-[20px] italic text-center dark:text-white text-quote">
         &quot;The best way to predict the future is to invent it.&quot;
       </div>
 
