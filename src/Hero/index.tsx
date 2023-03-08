@@ -13,10 +13,10 @@ const Hero: FC = () => {
 
       <div className="mt-[20px] lg:mt-0 lg:flex lg:flex-1 lg:flex-col lg:justify-center lg:mr-[20px]">
         <div className="font-bold text-center lg:text-left font-ShipporiMincho text-[20px] md:text-[46px]">
-          Expertly crafting{" "}
-          <span className="underline decoration-bluePrimary">Web</span> and{" "}
-          <span className="underline decoration-bluePrimary">Mobile</span>{" "}
-          experiences from scratch
+          Designing and developing{" "}
+          <span className="underline decoration-bluePrimary">Mobile</span> and{" "}
+          <span className="underline decoration-bluePrimary">Web</span>{" "}
+          solutions that work for you
         </div>
 
         <div className="flex justify-center lg:justify-start mt-[20px]">
