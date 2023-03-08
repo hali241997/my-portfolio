@@ -8,6 +8,7 @@ module.exports = {
         bluePrimary: "#194efb",
         quote: "#3a4660",
         paragraph: "#001455",
+        subtext: "#59647B",
       },
       backgroundColor: {
         lightBgPrimary: "#FAF9F6",

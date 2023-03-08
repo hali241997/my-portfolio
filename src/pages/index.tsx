@@ -1,7 +1,8 @@
-import AboutMe from "AboutMe";
-import Hero from "Hero";
+import AboutMe from "components/AboutMe";
+import Hero from "components/Hero";
 import Quote from "Quote";
 import { FC } from "react";
+import Services from "components/Services";
 
 const HomePage: FC = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage: FC = () => {
       <Hero />
       <Quote />
       <AboutMe />
+      <Services />
     </>
   );
 };

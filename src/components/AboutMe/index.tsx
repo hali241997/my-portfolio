@@ -2,12 +2,12 @@ import { FC } from "react";
 
 const AboutMe: FC = () => {
   return (
-    <div>
+    <div className="lg:mx-[100px]">
       <div className="font-bold text-center text-[40px] mb-[20px]">
         About Me
       </div>
 
-      <div className="lg:mx-[100px] md:space-y-[60px] space-y-[40px]">
+      <div className="md:space-y-[60px] space-y-[40px]">
         <div className="text-justify md:text-[25px] text-[16px] dark:text-white text-paragraph">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry&apos;s standard dummy text
