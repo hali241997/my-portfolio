@@ -9,7 +9,7 @@ const Quote: FC = () => {
       </div>
 
       <div className="text-[30px] md:text-[40px] mb-[20px] italic text-center">
-        &quot;The best way to predict the future is to invent it&quot;
+        &quot;The best way to predict the future is to invent it.&quot;
       </div>
 
       <div className="text-[20px] md:text-[30px] font-extrabold">
