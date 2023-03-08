@@ -42,12 +42,10 @@ const Header: FC = () => {
   return (
     <header className="flex items-center justify-between lg:px-[100px] lg:pb-4 md:pb-4 pb-2 border-b">
       <div className="flex items-center">
-        <Image
+        <img
           src="https://i.pravatar.cc/70"
           alt="avatar"
-          width={40}
-          height={40}
-          className="rounded-[50%] mr-4"
+          className="rounded-[50%] mr-4 h-[40px]"
         />
         <div className="font-[400] md:text-[20px] md:tracking-[5px] tracking-[2px] uppercase">
           Hasnain Ali
@@ -80,7 +78,7 @@ const Header: FC = () => {
 
         <div className="mr-4">{renderThemeChanger()}</div>
 
-        <Burger />
+        {mounted && <Burger theme={theme === "dark" ? "dark" : "light"} />}
       </button>
     </header>
   );

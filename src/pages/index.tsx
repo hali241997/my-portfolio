@@ -1,7 +1,12 @@
+import Hero from "Hero";
 import { FC } from "react";
 
 const HomePage: FC = () => {
-  return <div></div>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default HomePage;
