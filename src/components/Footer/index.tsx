@@ -133,9 +133,9 @@ const Footer: FC = () => {
       </div>
 
       <div className="flex flex-col justify-center py-5 space-y-5 text-center md:space-y-0 md:space-x-5 md:flex-row">
-        <div>@ Copyright 2022</div>
-        <div>hali241997</div>
-        <div>All rights reserved</div>
+        <div className="font-bold text-[15px]">@Copyright 2022</div>
+        <div className="text-[15px]">Hasnain Ali</div>
+        <div className="text-[15px]">All rights reserved</div>
       </div>
     </div>
   );
