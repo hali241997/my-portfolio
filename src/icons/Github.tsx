@@ -1,8 +1,12 @@
 import { FC } from "react";
 
-const Github: FC = () => {
+interface IconProps {
+  width?: string;
+}
+
+const Github: FC<IconProps> = ({ width = "100" }) => {
   return (
-    <svg width={100} fill="none" viewBox="0 0 102 102">
+    <svg width={width} fill="none" viewBox="0 0 102 102">
       <g clipPath="url(#a)">
         <ellipse cx={51} cy={54} rx={43} ry={42} fill="#fff" />
         <path

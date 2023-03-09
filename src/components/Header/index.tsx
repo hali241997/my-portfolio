@@ -34,6 +34,18 @@ const Header: FC = () => {
     );
   }, [mounted, setTheme, systemTheme, theme]);
 
+  const renderBurgerIcon = useCallback(() => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return <Burger theme="dark" />;
+    }
+
+    return <Burger theme="light" />;
+  }, [mounted, systemTheme, theme]);
+
   const menu = useMemo(
     () => ["About", "Services", "Tech Stack", "Projects"],
     []
@@ -78,7 +90,7 @@ const Header: FC = () => {
 
         <div className="mr-4">{renderThemeChanger()}</div>
 
-        {mounted && <Burger theme={theme === "dark" ? "dark" : "light"} />}
+        {renderBurgerIcon()}
       </button>
     </header>
   );

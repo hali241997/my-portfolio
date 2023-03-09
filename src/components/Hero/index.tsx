@@ -1,3 +1,4 @@
+import Button from "components/Button";
 import { FC } from "react";
 
 const Hero: FC = () => {
@@ -20,9 +21,7 @@ const Hero: FC = () => {
         </div>
 
         <div className="flex justify-center lg:justify-start mt-[20px]">
-          <button className="uppercase border px-[20px] py-[10px] tracking-[2px] border-bluePrimary md:text-[28px] md:px-[40px] lg:text-[16px] lg:px-[20px] lg:py-[10px]">
-            See the Glory
-          </button>
+          <Button>See the Glory</Button>
         </div>
       </div>
     </div>
