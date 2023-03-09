@@ -55,7 +55,7 @@ const Header: FC = () => {
     <header className="flex items-center justify-between lg:px-[100px] lg:pb-4 md:pb-4 pb-2 border-b">
       <div className="flex items-center">
         <img
-          src="https://i.pravatar.cc/70"
+          src="/images/header.png"
           alt="avatar"
           className="rounded-[50%] mr-4 h-[40px]"
         />
