@@ -1,9 +1,10 @@
 import { FC } from "react";
+import { IconProps } from "./types";
 
-const Whatsapp: FC = () => {
+const Whatsapp: FC<IconProps> = ({ width = "100" }) => {
   return (
     <svg
-      width="80"
+      width={width}
       fill="#000000"
       preserveAspectRatio="xMidYMid"
       version="1.1"

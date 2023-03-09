@@ -1,8 +1,9 @@
 import { FC } from "react";
+import { IconProps } from "./types";
 
-const Gmail: FC = () => {
+const Gmail: FC<IconProps> = ({ width = "100", height = "100" }) => {
   return (
-    <svg width="80" height="80" viewBox="0 0 360 270">
+    <svg width={width} height={height} viewBox="0 0 360 270">
       <path d="m82 270v-142l-82-63v175c0 20 10 30 30 30" fill="#4285F4" />
       <path d="m78 127 102 77 102-77v-98l-102 77-102-77" fill="#EA4335" />
       <path d="m278 270v-142l82-63v175c0 20-10 30-30 30" fill="#34A853" />

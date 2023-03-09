@@ -1,8 +1,5 @@
 import { FC } from "react";
-
-interface IconProps {
-  width?: string;
-}
+import { IconProps } from "./types";
 
 const Github: FC<IconProps> = ({ width = "100" }) => {
   return (
