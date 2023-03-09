@@ -3,7 +3,7 @@ import { FC } from "react";
 const Hero: FC = () => {
   return (
     <div className="flex flex-col mt-[20px] lg:flex-row-reverse lg:mx-[100px]">
-      <div className="self-center lg:flex lg:flex-1">
+      <div className="self-center lg:flex lg:flex-1 lg:justify-end">
         <img
           src="https://i.pravatar.cc"
           alt="hero"
