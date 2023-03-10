@@ -8,7 +8,7 @@ const Hero: FC = () => {
         <img
           src="/images/hero.png"
           alt="hero"
-          className="object-cover h-[600px]"
+          className="object-cover h-[600px] border-bluePrimary border-[2px] rounded"
         />
       </div>
 
