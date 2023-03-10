@@ -9,7 +9,7 @@ import MaterialUI from "icons/MaterialUI";
 import Monogdb from "icons/Monogdb";
 import MySQL from "icons/MySQL";
 import Nestjs from "icons/Nestjs";
-import NextjsIcon from "icons/NextjsIcon";
+import Nextjs from "icons/Nextjs";
 import Nodejs from "icons/Nodejs";
 import Reactjs from "icons/Reactjs";
 import ReactNative from "icons/ReactNative";
@@ -25,7 +25,7 @@ const TechStack: FC = () => {
       { component: <Reactjs />, name: "React.js" },
       { component: <ReactNative />, name: "React Native" },
       { component: <Expo />, name: "Expo" },
-      { component: <NextjsIcon />, name: "Next.js" },
+      { component: <Nextjs />, name: "Next.js" },
       { component: <MaterialUI />, name: "Material UI" },
       { component: <Tailwindcss />, name: "Tailwind CSS" },
       { component: <Nodejs />, name: "Node.js" },

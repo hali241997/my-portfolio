@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-const NextjsIcon: FC = () => {
+const Nextjs: FC = () => {
   return (
     <svg width="100" fill="none" viewBox="0 0 800 800">
       <circle cx="445.5" cy="473.5" r="313.5" fill="#fff" />
@@ -25,4 +25,4 @@ const NextjsIcon: FC = () => {
   );
 };
 
-export default NextjsIcon;
+export default Nextjs;
