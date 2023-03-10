@@ -31,22 +31,10 @@ const Footer: FC = () => {
   return (
     <div>
       <div className="border-b mt-[40px] lg:flex lg:px-[100px] lg:py-[100px]">
-        <div className="flex flex-col flex-1 mb-[20px] lg:mb-0">
+        <div className="flex flex-col flex-1 mb-[20px] lg:mb-">
           <div className="uppercase text-[20px] mb-[20px]">Drop a line</div>
 
-          <div className="flex flex-col space-y-10">
-            <Input
-              name="email"
-              placeholder="Your Email"
-              value={formik.values.email}
-              errorText={showFieldError(
-                formik.touched.email,
-                formik.errors.email
-              )}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-
+          <div className="flex flex-col justify-center flex-1 space-y-10">
             <Input
               name="subject"
               placeholder="Subject"
