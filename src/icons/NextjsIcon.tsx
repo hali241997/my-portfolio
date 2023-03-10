@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-const Nextjs: FC = () => {
+const NextjsIcon: FC = () => {
   return (
     <svg width="100" fill="none" viewBox="0 0 800 800">
       <g clipPath="url(#a)">
@@ -32,4 +32,4 @@ const Nextjs: FC = () => {
   );
 };
 
-export default Nextjs;
+export default NextjsIcon;
