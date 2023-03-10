@@ -17,7 +17,7 @@ const Footer: FC = () => {
 
   const handleSubmit = (values: FormValues) => {
     window.open(
-      `mailto:${values.email}?subject=${values.subject}&body=${values.message}`,
+      `mailto:mhali241997@gmail.com?subject=${values.subject}&body=${values.message}`,
       "_blank"
     );
   };
