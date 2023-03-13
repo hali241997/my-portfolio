@@ -1,5 +1,7 @@
+import clsx from "clsx";
 import Button from "components/Button";
 import { FC } from "react";
+import styles from "./hero.module.css";
 
 const Hero: FC = () => {
   return (
@@ -8,7 +10,10 @@ const Hero: FC = () => {
         <img
           src="/images/hero.png"
           alt="hero"
-          className="object-cover w-[250px] lg:w-[400px] border-bluePrimary border-[2px] rounded"
+          className={clsx(
+            "object-cover w-[250px] h-[250px] rounded-full shadow-[0px_0px_50px_0px_rgba(256,256,256,0.3)]",
+            styles.animateImage
+          )}
         />
       </div>
 
