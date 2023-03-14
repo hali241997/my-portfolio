@@ -1,51 +1,6 @@
-import Burger from "icons/Burger";
-import Moon from "icons/Moon";
-import Sun from "icons/Sun";
-import { useTheme } from "next-themes";
-import Image from "next/image";
-import { FC, useCallback, useEffect, useMemo, useState } from "react";
+import { FC, useMemo } from "react";
 
 const Header: FC = () => {
-  const { theme, systemTheme, setTheme } = useTheme();
-
-  const [mounted, setMounted] = useState<boolean>(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const renderThemeChanger = useCallback(() => {
-    if (!mounted) return null;
-
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return (
-        <div className="cursor-pointer" onClick={() => setTheme("light")}>
-          <Sun />
-        </div>
-      );
-    }
-
-    return (
-      <div className="cursor-pointer" onClick={() => setTheme("dark")}>
-        <Moon />
-      </div>
-    );
-  }, [mounted, setTheme, systemTheme, theme]);
-
-  const renderBurgerIcon = useCallback(() => {
-    if (!mounted) return null;
-
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return <Burger theme="dark" />;
-    }
-
-    return <Burger theme="light" />;
-  }, [mounted, systemTheme, theme]);
-
   const menu = useMemo(
     () => ["About", "Services", "Tech Stack", "Projects"],
     []
@@ -78,7 +33,6 @@ const Header: FC = () => {
         <a href="mailto:mhali241997@gmail.com" className="mr-4 underline">
           Fire Me An Email
         </a>
-        {renderThemeChanger()}
       </div>
 
       <button className="flex lg:hidden">
@@ -87,10 +41,6 @@ const Header: FC = () => {
             Fire Me An Email
           </a>
         </div>
-
-        <div className="mr-4">{renderThemeChanger()}</div>
-
-        {renderBurgerIcon()}
       </button>
     </header>
   );

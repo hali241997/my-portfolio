@@ -8,7 +8,7 @@ const AboutMe: FC = () => {
       </div>
 
       <div className="md:space-y-[60px] space-y-[40px]">
-        <div className="text-justify md:text-[25px] text-[16px] dark:text-white text-paragraph">
+        <div className="text-justify md:text-[25px] text-[16px] text-white">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry&apos;s standard dummy text
           ever since the 1500s, when an unknown printer took a galley of type
@@ -20,7 +20,7 @@ const AboutMe: FC = () => {
           including versions of Lorem Ipsum.
         </div>
 
-        <div className="text-justify md:text-[25px] text-[16px] dark:text-white text-paragraph">
+        <div className="text-justify md:text-[25px] text-[16px] text-white">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry&apos;s standard dummy text
           ever since the 1500s, when an unknown printer took a galley of type
@@ -32,7 +32,7 @@ const AboutMe: FC = () => {
           including versions of Lorem Ipsum.
         </div>
 
-        <div className="text-justify md:text-[25px] text-[16px] dark:text-white text-paragraph">
+        <div className="text-justify md:text-[25px] text-[16px] text-white">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry&apos;s standard dummy text
           ever since the 1500s, when an unknown printer took a galley of type

@@ -12,7 +12,7 @@ const Service: FC<ServiceProps> = ({ category, description }) => {
         {category}
       </div>
 
-      <div className="mb-4 font-medium text-justify text-[16px] dark:text-white text-subtext">
+      <div className="mb-4 font-medium text-justify text-[16px] text-white">
         {description}
       </div>
     </div>

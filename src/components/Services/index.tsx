@@ -44,7 +44,7 @@ const Services: FC = () => {
         Services
       </div>
 
-      <div className="text-justify md:text-[25px] text-[16px] dark:text-white text-paragraph lg:mx-[124px] mb-[20px]">
+      <div className="text-justify md:text-[25px] text-[16px] text-white lg:mx-[124px] mb-[20px]">
         As a full-stack developer, I have complete control, enabling me to
         efficiently and effectively create sophisticated web and mobile
         applications with ease.
