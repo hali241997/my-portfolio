@@ -9,10 +9,10 @@ const HomePage: FC = () => {
   return (
     <>
       <Hero />
-      <Quote />
+      {/* <Quote />
       <AboutMe />
       <Services />
-      <TechStack />
+      <TechStack /> */}
     </>
   );
 };

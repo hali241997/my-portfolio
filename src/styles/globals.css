@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply lg:p-4 md:p-4 p-2 bg-[#121212] font-Poppins text-white;
+    @apply text-white bg-darkPrimary font-Poppins;
   }
 }

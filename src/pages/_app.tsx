@@ -5,12 +5,10 @@ import Footer from "components/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    // <ThemeProvider enableSystem attribute="class">
     <>
-      <Header />
+      <Header height="6vh" />
       <Component {...pageProps} />
-      <Footer />
+      {/* <Footer /> */}
     </>
-    // </ThemeProvider>
   );
 }
