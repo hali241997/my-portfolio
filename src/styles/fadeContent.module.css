@@ -1,12 +1,12 @@
 .fadeInContent {
-  animation: fadeInAnim 3s;
+  animation: fadeInAnim 2s;
   animation-delay: 0;
 }
 
 @keyframes fadeInAnim {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30%);
   }
   to {
     opacity: 1;
