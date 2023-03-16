@@ -1,19 +1,3 @@
-.fadeInContent {
-  animation: fadeInAnim 3s;
-  animation-delay: 0;
-}
-
-@keyframes fadeInAnim {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .fadeIn {
   width: 1px;
   height: 1px;
@@ -566,6 +550,18 @@
     659px 1860px #fff, 388px 1412px #fff, 1212px 458px #fff, 755px 1468px #fff,
     696px 1654px #fff, 1144px 60px #fff;
 }
+
+@keyframes fadeInAnim {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 @keyframes animStar {
   from {

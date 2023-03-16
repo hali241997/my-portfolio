@@ -1,5 +1,7 @@
+import clsx from "clsx";
 import Burger from "icons/Burger";
 import { FC, useCallback, useMemo } from "react";
+import fadeStyles from "../../styles/fadeContent.module.css";
 import { HeaderProps } from "./types";
 
 const Header: FC<HeaderProps> = ({ height }) => {
@@ -15,7 +17,10 @@ const Header: FC<HeaderProps> = ({ height }) => {
   return (
     <header>
       <div
-        className="hidden items-center justify-end md:flex space-x-5 px-[40px]"
+        className={clsx(
+          "hidden items-center justify-end md:flex space-x-5 px-[40px]",
+          fadeStyles.fadeInContent
+        )}
         style={{ height }}
       >
         {menu.map((item, index) => {
@@ -31,7 +36,10 @@ const Header: FC<HeaderProps> = ({ height }) => {
       </div>
 
       <div
-        className="md:hidden items-center px-[20px] flex justify-end"
+        className={clsx(
+          "md:hidden items-center px-[20px] flex justify-end",
+          fadeStyles.fadeInContent
+        )}
         style={{ height }}
       >
         <Burger />
