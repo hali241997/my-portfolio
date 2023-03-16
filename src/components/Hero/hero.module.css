@@ -565,10 +565,26 @@
 
 @keyframes animStar {
   from {
-    transform: translatex(0px);
+    transform: translateX(0);
   }
   to {
     transform: translateX(2000px)
   }
 
+}
+
+.downArrow {
+  animation: downArrowAnimation 2s linear infinite;
+}
+
+
+@keyframes downArrowAnimation {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

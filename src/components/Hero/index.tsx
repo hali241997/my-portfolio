@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import Button from "components/Button";
+import useBreakpoint from "hooks/useBreakpoint";
+import DownArrow from "icons/DownArrow";
 import GithubLine from "icons/GithubLine";
 import LinkedInLine from "icons/LinkedInLine";
 import MyEmail from "icons/MyEmail";
@@ -10,23 +12,34 @@ import revealStyles from "../../styles/reveal.module.css";
 import styles from "./hero.module.css";
 
 const Hero: FC = () => {
+  const breakpoint = useBreakpoint();
+
   const handleGetInTouch = useCallback(() => {
     window.open(constants.whatsappLink, "_blank");
   }, []);
 
   useEffect(() => {
     const starryBg = document.getElementById("starAnimation");
+    const downArrow = document.getElementById("downArrowAnimation");
 
-    if (starryBg) {
+    if (starryBg && downArrow) {
       starryBg.addEventListener("animationend", () => {
         starryBg.classList.replace(styles.fadeIn, styles.stars);
+        breakpoint !== "sm" && downArrow.classList.replace("hidden", "block");
       });
     }
-  }, []);
+  }, [breakpoint]);
 
   return (
-    <div className="w-[100vw] h-[94vh] overflow-hidden">
+    <div className="w-[100vw] h-[94vh] overflow-hidden relative">
       <div id="starAnimation" className={styles.fadeIn} />
+
+      <div
+        id="downArrowAnimation"
+        className={clsx("absolute bottom-2 left-1/2 hidden", styles.downArrow)}
+      >
+        <DownArrow />
+      </div>
 
       <div
         className={clsx(
@@ -34,7 +47,7 @@ const Hero: FC = () => {
           revealStyles.revealContent
         )}
       >
-        <div className="flex flex-1">
+        <div className="z-10 flex flex-1">
           <div className="flex flex-col space-y-10">
             <div className="lg:h-[50px] md:h-[200px] h-[150px] w-[1px] flex self-center bg-bluePrimary" />
 
