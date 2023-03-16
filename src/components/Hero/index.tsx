@@ -6,7 +6,7 @@ import MyEmail from "icons/MyEmail";
 import WhatsappLine from "icons/WhatsappLine";
 import { FC, useCallback, useEffect } from "react";
 import { constants } from "utils/constants";
-import fadeStyles from "../../styles/fadeContent.module.css";
+import revealStyles from "../../styles/reveal.module.css";
 import styles from "./hero.module.css";
 
 const Hero: FC = () => {
@@ -31,7 +31,7 @@ const Hero: FC = () => {
       <div
         className={clsx(
           "h-[94vh] md:px-[40px] px-[20px] flex items-center",
-          fadeStyles.fadeInContent
+          revealStyles.revealContent
         )}
       >
         <div className="flex flex-1">

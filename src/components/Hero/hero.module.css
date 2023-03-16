@@ -1,7 +1,7 @@
 .fadeIn {
   width: 1px;
   height: 1px;
-  animation: fadeInAnim 2s;
+  animation: revealAnimation 2s;
   animation-delay: 0;
   box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
     1312px 276px #fff, 451px 625px #fff, 521px 1931px #fff, 1087px 1871px #fff,
@@ -551,7 +551,7 @@
     696px 1654px #fff, 1144px 60px #fff;
 }
 
-@keyframes fadeInAnim {
+@keyframes revealAnimation {
   from {
     opacity: 0;
     transform: translateY(30%);

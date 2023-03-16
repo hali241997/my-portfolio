@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Burger from "icons/Burger";
 import { FC, useCallback, useMemo } from "react";
-import fadeStyles from "../../styles/fadeContent.module.css";
+import revealStyles from "../../styles/reveal.module.css";
 import { HeaderProps } from "./types";
 
 const Header: FC<HeaderProps> = ({ height }) => {
@@ -19,7 +19,7 @@ const Header: FC<HeaderProps> = ({ height }) => {
       <div
         className={clsx(
           "hidden items-center justify-end md:flex space-x-5 px-[40px]",
-          fadeStyles.fadeInContent
+          revealStyles.revealContent
         )}
         style={{ height }}
       >
@@ -38,7 +38,7 @@ const Header: FC<HeaderProps> = ({ height }) => {
       <div
         className={clsx(
           "md:hidden items-center px-[20px] flex justify-end",
-          fadeStyles.fadeInContent
+          revealStyles.revealContent
         )}
         style={{ height }}
       >

@@ -1,9 +1,9 @@
-.fadeInContent {
-  animation: fadeInAnim 2s;
+.revealContent {
+  animation: revealAnimation 2s;
   animation-delay: 0;
 }
 
-@keyframes fadeInAnim {
+@keyframes revealAnimation {
   from {
     opacity: 0;
     transform: translateY(30%);
