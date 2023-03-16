@@ -18,6 +18,7 @@ module.exports = {
       fontFamily: {
         Poppins: [`'Poppins', sans-serif`],
         RobotoMono: [`'Roboto Mono', monospace`],
+        SourceCodePro: [`'Source Code Pro', monospace`],
       },
     },
   },

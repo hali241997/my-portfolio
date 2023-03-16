@@ -21,10 +21,10 @@ const Header: FC<HeaderProps> = ({ height }) => {
         {menu.map((item, index) => {
           return (
             <div key={item} className="flex space-x-2 cursor-pointer">
-              <div className="text-bluePrimary font-RobotoMono">
+              <div className="text-bluePrimary font-SourceCodePro">
                 {(index + 1).toString().padStart(2, "0")}.
               </div>
-              <div className="font-RobotoMono">{toCode(item)}</div>
+              <div className="font-SourceCodePro">{toCode(item)}</div>
             </div>
           );
         })}

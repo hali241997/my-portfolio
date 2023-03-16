@@ -4,7 +4,7 @@ import GithubLine from "icons/GithubLine";
 import LinkedInLine from "icons/LinkedInLine";
 import MyEmail from "icons/MyEmail";
 import WhatsappLine from "icons/WhatsappLine";
-import { FC, useCallback } from "react";
+import { FC, useCallback, useEffect } from "react";
 import { constants } from "utils/constants";
 import styles from "./hero.module.css";
 
@@ -13,11 +13,26 @@ const Hero: FC = () => {
     window.open(constants.whatsappLink, "_blank");
   }, []);
 
-  return (
-    <div className={clsx("w-[100vw] h-[94vh]", styles.bg)}>
-      <div className={styles.stars} />
+  useEffect(() => {
+    const starryBg = document.getElementById("starAnimation");
 
-      <div className="h-[94vh] md:px-[40px] px-[20px] flex items-center">
+    if (starryBg) {
+      starryBg.addEventListener("animationend", () => {
+        starryBg.classList.replace(styles.fadeIn, styles.stars);
+      });
+    }
+  }, []);
+
+  return (
+    <div className="w-[100vw] h-[94vh] overflow-hidden">
+      <div id="starAnimation" className={styles.fadeIn} />
+
+      <div
+        className={clsx(
+          "h-[94vh] md:px-[40px] px-[20px] flex items-center",
+          styles.fadeInContent
+        )}
+      >
         <div className="flex flex-1">
           <div className="flex flex-col space-y-10">
             <div className="lg:h-[50px] md:h-[200px] h-[150px] w-[1px] flex self-center bg-bluePrimary" />
