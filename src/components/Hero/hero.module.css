@@ -574,17 +574,15 @@
 }
 
 .downArrow {
-  animation: downArrowAnimation 2s linear infinite;
+  animation: downArrowAnimation 0.5s linear infinite alternate-reverse;
 }
 
 
 @keyframes downArrowAnimation {
-  from {
-    transform: translateY(-50%);
-    opacity: 0;
+  0% {
+    transform: translateY(7px);
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  100% {
+    transform: translateY(-7px);
   }
 }

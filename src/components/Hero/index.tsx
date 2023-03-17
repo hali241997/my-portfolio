@@ -6,7 +6,7 @@ import GithubLine from "icons/GithubLine";
 import LinkedInLine from "icons/LinkedInLine";
 import MyEmail from "icons/MyEmail";
 import WhatsappLine from "icons/WhatsappLine";
-import { FC, useCallback, useEffect } from "react";
+import { FC, useCallback, useEffect, useRef } from "react";
 import { constants } from "utils/constants";
 import revealStyles from "../../styles/reveal.module.css";
 import styles from "./hero.module.css";
@@ -14,32 +14,33 @@ import styles from "./hero.module.css";
 const Hero: FC = () => {
   const breakpoint = useBreakpoint();
 
+  const starryBg = useRef<HTMLDivElement>(null);
+  const downArrow = useRef<HTMLButtonElement>(null);
+
   const handleGetInTouch = useCallback(() => {
     window.open(constants.whatsappLink, "_blank");
   }, []);
 
   useEffect(() => {
-    const starryBg = document.getElementById("starAnimation");
-    const downArrow = document.getElementById("downArrowAnimation");
-
-    if (starryBg && downArrow) {
-      starryBg.addEventListener("animationend", () => {
-        starryBg.classList.replace(styles.fadeIn, styles.stars);
-        breakpoint !== "sm" && downArrow.classList.replace("hidden", "block");
+    if (starryBg.current) {
+      starryBg.current.addEventListener("animationend", () => {
+        starryBg.current?.classList.replace(styles.fadeIn, styles.stars);
+        breakpoint !== "sm" &&
+          downArrow.current?.classList.replace("hidden", "block");
       });
     }
   }, [breakpoint]);
 
   return (
     <div className="w-[100vw] h-[94vh] overflow-hidden relative">
-      <div id="starAnimation" className={styles.fadeIn} />
+      <div ref={starryBg} className={styles.fadeIn} />
 
-      <div
-        id="downArrowAnimation"
+      <button
+        ref={downArrow}
         className={clsx("absolute bottom-2 left-1/2 hidden", styles.downArrow)}
       >
         <DownArrow />
-      </div>
+      </button>
 
       <div
         className={clsx(
