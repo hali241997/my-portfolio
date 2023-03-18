@@ -29,6 +29,13 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.35.0.tgz#b7569632b0b788a0ca0e438235154e45d42813a7"
   integrity sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==
 
+"@frank-mayer/react-tag-cloud@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@frank-mayer/react-tag-cloud/-/react-tag-cloud-1.1.1.tgz#280d248fdac5dfd45b1398302729c46b59f0663e"
+  integrity sha512-biNTK45+Q7t82NTZoh/Lkviu/azRPhTvpSq0EIOdTzrSYQRgoBG+OMAG0+QuiT8tiqVQNlqg6k8lOqfQglYEvw==
+  dependencies:
+    TagCloud "^2.3.0"
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
@@ -249,6 +256,11 @@
   dependencies:
     "@typescript-eslint/types" "5.54.1"
     eslint-visitor-keys "^3.3.0"
+
+TagCloud@^2.3.0:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/TagCloud/-/TagCloud-2.3.2.tgz#2f5e6d58f58d3ec060791ebeca6ac604b50f246e"
+  integrity sha512-WMnfCyRCjAejqTBHR3EVcA02nCOhoD1HEEU+KHS7m9Oj/t4IcOKTjklyOadTibeGRA4poK/rxwuO4g61qZvObA==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"

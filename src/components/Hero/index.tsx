@@ -21,6 +21,12 @@ const Hero: FC = () => {
     window.open(constants.whatsappLink, "_blank");
   }, []);
 
+  const handleDownArrowClick = useCallback(() => {
+    const scrollHeight = window.innerHeight;
+
+    window.scrollTo({ top: scrollHeight, behavior: "smooth" });
+  }, []);
+
   useEffect(() => {
     if (starryBg.current) {
       starryBg.current.addEventListener("animationend", () => {
@@ -38,6 +44,7 @@ const Hero: FC = () => {
       <button
         ref={downArrow}
         className={clsx("absolute bottom-2 left-1/2 hidden", styles.downArrow)}
+        onClick={handleDownArrowClick}
       >
         <DownArrow />
       </button>
