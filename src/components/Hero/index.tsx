@@ -31,8 +31,10 @@ const Hero: FC = () => {
     if (starryBg.current) {
       starryBg.current.addEventListener("animationend", () => {
         starryBg.current?.classList.replace(styles.fadeIn, styles.stars);
-        breakpoint !== "sm" &&
-          downArrow.current?.classList.replace("hidden", "block");
+        setTimeout(() => {
+          breakpoint !== "sm" &&
+            downArrow.current?.classList.replace("hidden", "block");
+        }, 2000);
       });
     }
   }, [breakpoint]);
