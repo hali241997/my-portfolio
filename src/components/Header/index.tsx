@@ -6,7 +6,7 @@ import { HeaderProps } from "./types";
 
 const Header: FC<HeaderProps> = ({ height }) => {
   const menu = useMemo(
-    () => ["About Me", "Services", "Tech Stack", "Projects"],
+    () => ["About Me", "Portfolio", "Services", "Tech Stack"],
     []
   );
 

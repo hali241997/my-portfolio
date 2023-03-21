@@ -7,3 +7,15 @@
     @apply text-white bg-darkPrimary font-Poppins;
   }
 }
+
+.reveal {
+  position: relative;
+  transform: translateY(30%);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}

@@ -40,15 +40,17 @@ const TechStack: FC = () => {
   }, []);
 
   return (
-    <div className="lg:mx-[100px] mt-[80px]">
-      <div className="font-bold text-center text-[40px] mb-[40px]">
-        My Tech Stack
-      </div>
+    <div className="reveal">
+      <div className="lg:mx-[100px] mt-[80px]">
+        <div className="font-bold text-center text-[40px] mb-[40px]">
+          My Tech Stack
+        </div>
 
-      <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-        {techs.map((tech) => {
-          return <Skill key={tech.name} {...tech} />;
-        })}
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+          {techs.map((tech) => {
+            return <Skill key={tech.name} {...tech} />;
+          })}
+        </div>
       </div>
     </div>
   );
