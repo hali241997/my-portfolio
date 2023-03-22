@@ -8,8 +8,8 @@ const AboutMe: FC = () => {
   return (
     <div className="reveal">
       <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
-        <div className="font-bold font-RobotoMono lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
-          <span className="text-bluePrimary">01.</span> About Me
+        <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
+          <span className="text-bluePrimary">01.</span> {`<about me>`}
         </div>
 
         <div className="flex flex-col lg:flex-row">

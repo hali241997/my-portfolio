@@ -4,6 +4,7 @@ import Quote from "components/Quote";
 import { FC, useEffect } from "react";
 import Services from "components/Services";
 import TechStack from "components/TechStack";
+import Portfolio from "components/Portfolio";
 
 const HomePage: FC = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const HomePage: FC = () => {
     <>
       <Hero />
       <AboutMe />
+      <Portfolio />
       <TechStack />
 
       {/* <Quote />
