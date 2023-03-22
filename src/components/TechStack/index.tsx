@@ -1,4 +1,5 @@
 import Skill from "components/Skill";
+import useBreakpoint from "hooks/useBreakpoint";
 import Expo from "icons/Expo";
 import Expressjs from "icons/Expressjs";
 import Firebase from "icons/Firebase";
@@ -18,32 +19,82 @@ import TypeScript from "icons/TypeScript";
 import { FC, useMemo } from "react";
 
 const TechStack: FC = () => {
+  const breakpoint = useBreakpoint();
+
   const techs = useMemo(() => {
     return [
-      { component: <JavaScript />, name: "JavaScript" },
-      { component: <TypeScript />, name: "TypeScript" },
-      { component: <Reactjs />, name: "React.js" },
-      { component: <ReactNative />, name: "React Native" },
-      { component: <Expo />, name: "Expo" },
-      { component: <Nextjs />, name: "Next.js" },
-      { component: <MaterialUI />, name: "Material UI" },
-      { component: <Tailwindcss />, name: "Tailwind CSS" },
-      { component: <Nodejs />, name: "Node.js" },
-      { component: <Nestjs />, name: "Nest.js" },
-      { component: <Expressjs />, name: "Express.js" },
-      { component: <MySQL />, name: "MySQL" },
-      { component: <Git />, name: "Git" },
-      { component: <Github />, name: "Github" },
-      { component: <Monogdb />, name: "MongoDB" },
-      { component: <Firebase />, name: "Firebase" },
+      {
+        component: <JavaScript width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "JavaScript",
+      },
+      {
+        component: <TypeScript width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "TypeScript",
+      },
+      {
+        component: <Reactjs width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "React.js",
+      },
+      {
+        component: <ReactNative width={breakpoint === "sm" ? "68" : "132"} />,
+        name: "React Native",
+      },
+      {
+        component: <Expo width={breakpoint === "sm" ? "58" : "116"} />,
+        name: "Expo",
+      },
+      {
+        component: <Nextjs width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Next.js",
+      },
+      {
+        component: <MaterialUI width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Material UI",
+      },
+      {
+        component: <Tailwindcss width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Tailwind CSS",
+      },
+      {
+        component: <Nodejs width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Node.js",
+      },
+      {
+        component: <Nestjs width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Nest.js",
+      },
+      {
+        component: <Expressjs width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Express.js",
+      },
+      {
+        component: <MySQL width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "MySQL",
+      },
+      {
+        component: <Git width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Git",
+      },
+      {
+        component: <Github width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Github",
+      },
+      {
+        component: <Monogdb width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "MongoDB",
+      },
+      {
+        component: <Firebase width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "Firebase",
+      },
     ];
-  }, []);
+  }, [breakpoint]);
 
   return (
     <div className="reveal">
-      <div className="lg:mx-[100px] mt-[80px]">
-        <div className="font-bold text-center text-[40px] mb-[40px]">
-          My Tech Stack
+      <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
+        <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
+          <span className="text-bluePrimary">03.</span> {"<tech stack>"}
         </div>
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">

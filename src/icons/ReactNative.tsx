@@ -1,8 +1,9 @@
 import { FC } from "react";
+import { IconProps } from "./types";
 
-const ReactNative: FC = () => {
+const ReactNative: FC<IconProps> = ({ width = "132" }) => {
   return (
-    <svg width="132" viewBox="0 0 438 330" fill="none">
+    <svg width={width} viewBox="0 0 438 330" fill="none">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

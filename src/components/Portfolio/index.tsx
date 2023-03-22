@@ -45,8 +45,8 @@ const Portfolio: FC = () => {
   ];
 
   return (
-    <div className="md:py-[60px] py-[0px] px-[20px] md:px-[40px]">
-      <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
+    <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
+      <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px] reveal">
         <span className="text-bluePrimary">02.</span> {"<portfolio>"}
       </div>
 

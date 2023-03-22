@@ -1,8 +1,9 @@
 import { FC } from "react";
+import { IconProps } from "./types";
 
-const Nextjs: FC = () => {
+const Nextjs: FC<IconProps> = ({ width = "100" }) => {
   return (
-    <svg width="100" fill="none" viewBox="0 0 800 800">
+    <svg width={width} fill="none" viewBox="0 0 800 800">
       <circle cx="445.5" cy="473.5" r="313.5" fill="#fff" />
       <mask
         id="a"
