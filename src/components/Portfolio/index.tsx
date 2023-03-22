@@ -23,14 +23,14 @@ const Portfolio: FC = () => {
       imagePath: "/images/seerene.png",
       projectName: "Seerene",
       description:
-        "Currently working with a client to build an app designed for NGOs in Italy. The goal is to consolidate all NGO platforms under a single umbrella. I built the app from the ground up, and are currently in Phase 2 of the project. I am committed to leading this effort and ensuring the app is user-friendly and effective.",
+        "Collaborating on app development for Italian NGOs, consolidating all platforms into one. Currently in Phase 2 and committed to delivering top-quality results.",
       tags: ["JavaScript", "React Native", "Redux", "Axois", "Secure Storage"],
     },
     {
       imagePath: "/images/circle-it.png",
       projectName: "CircleIt",
       description:
-        "Currently leading the development of CircleIt, an app that allows you to send greetings across time. For this project, I have been utilizing advanced technologies such as native-base, moment, instabug-reactnative, react-native-fast-image, react-native-firebase, react-native-modal, and react-native-sound to ensure a seamless user experience.",
+        "Developing CircleIt, an app for time-based greetings, utilizing advanced technologies (native-base, instabug-reactnative, react-native-fast-image, react-native-sound) for seamless user experience.",
       tags: [
         "JavaScript",
         "React Native",
@@ -45,12 +45,12 @@ const Portfolio: FC = () => {
   ];
 
   return (
-    <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
+    <div className="md:py-[60px] py-[0px] px-[20px] md:px-[40px]">
       <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
         <span className="text-bluePrimary">02.</span> {"<portfolio>"}
       </div>
 
-      <div className="mx-[100px] space-y-[150px]">
+      <div className="lg:mx-[100px] lg:space-y-[150px] space-y-[50px] block">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
 

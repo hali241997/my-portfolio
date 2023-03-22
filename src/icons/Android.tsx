@@ -1,9 +1,16 @@
+import useBreakpoint from "hooks/useBreakpoint";
 import { FC } from "react";
 
 const Android: FC = () => {
+  const breakpoint = useBreakpoint();
+
   return (
     <svg
-      width="20"
+      width={
+        breakpoint === "lg" || breakpoint === "xl" || breakpoint === "md"
+          ? "20"
+          : "12"
+      }
       fill="white"
       version="1.1"
       viewBox="-146 129 218 256"
