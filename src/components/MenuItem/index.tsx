@@ -1,4 +1,5 @@
 import { FC, RefObject, useCallback, useRef } from "react";
+import { toCode } from "utils/conversion";
 
 export interface MenuItemProps {
   item: { menu: string; ref: RefObject<HTMLDivElement> };
@@ -7,10 +8,6 @@ export interface MenuItemProps {
 
 const MenuItem: FC<MenuItemProps> = ({ item, index }) => {
   const borderBottomRef = useRef<HTMLDivElement>(null);
-
-  const toCode = useCallback((menuItem: string) => {
-    return `<${menuItem.toLowerCase()}>`;
-  }, []);
 
   const handleMouseEnter = useCallback(() => {
     if (borderBottomRef.current) {

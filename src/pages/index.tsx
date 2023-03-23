@@ -7,6 +7,11 @@ import TechStack from "components/TechStack";
 import { FC, useEffect, useRef } from "react";
 
 const HomePage: FC = () => {
+  const aboutMeRef = useRef<HTMLDivElement>(null);
+  const portfolioRef = useRef<HTMLDivElement>(null);
+  const techStackRef = useRef<HTMLDivElement>(null);
+  const contactMeRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const revealContent = () => {
       const reveals = document.querySelectorAll(".reveal");
@@ -28,11 +33,6 @@ const HomePage: FC = () => {
       window.removeEventListener("scroll", revealContent);
     };
   }, []);
-
-  const aboutMeRef = useRef<HTMLDivElement>(null);
-  const portfolioRef = useRef<HTMLDivElement>(null);
-  const techStackRef = useRef<HTMLDivElement>(null);
-  const contactMeRef = useRef<HTMLDivElement>(null);
 
   return (
     <>

@@ -61,7 +61,9 @@ const Portfolio: FC<PortfolioProps> = ({ portfolioRef }) => {
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
 
-          return <Project key={project.link} {...project} isEven={isEven} />;
+          return (
+            <Project key={project.projectName} {...project} isEven={isEven} />
+          );
         })}
       </div>
     </div>
