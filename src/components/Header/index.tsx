@@ -1,19 +1,33 @@
 import clsx from "clsx";
+import MenuItem from "components/MenuItem";
 import Burger from "icons/Burger";
-import { FC, useCallback, useEffect, useMemo, useState } from "react";
+import { FC, RefObject, useEffect, useMemo, useState } from "react";
 import headerStyles from "./header.module.css";
 
-const Header: FC = () => {
+export interface HeaderProps {
+  aboutMeRef: RefObject<HTMLDivElement>;
+  portfolioRef: RefObject<HTMLDivElement>;
+  techStackRef: RefObject<HTMLDivElement>;
+  contactMeRef: RefObject<HTMLDivElement>;
+}
+
+const Header: FC<HeaderProps> = ({
+  aboutMeRef,
+  portfolioRef,
+  techStackRef,
+  contactMeRef,
+}) => {
   const menu = useMemo(
-    () => ["About Me", "Portfolio", "Tech Stack", "Contact Me"],
-    []
+    () => [
+      { menu: "About Me", ref: aboutMeRef },
+      { menu: "Portfolio", ref: portfolioRef },
+      { menu: "Tech Stack", ref: techStackRef },
+      { menu: "Contact Me", ref: contactMeRef },
+    ],
+    [aboutMeRef, contactMeRef, portfolioRef, techStackRef]
   );
 
   const [scrollPosition, setScrollPosition] = useState<number>(0);
-
-  const toCode = useCallback((menuItem: string) => {
-    return `<${menuItem.toLowerCase()}>`;
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,14 +49,7 @@ const Header: FC = () => {
     >
       <div className="hidden md:flex h-[6vh] items-center justify-end space-x-5 px-[40px]">
         {menu.map((item, index) => {
-          return (
-            <div key={item} className="flex space-x-2 cursor-pointer">
-              <div className="text-bluePrimary font-SourceCodePro">
-                {(index + 1).toString().padStart(2, "0")}.
-              </div>
-              <div className="font-SourceCodePro">{toCode(item)}</div>
-            </div>
-          );
+          return <MenuItem key={item.menu} item={item} index={index} />;
         })}
       </div>
 

@@ -16,9 +16,13 @@ import Reactjs from "icons/Reactjs";
 import ReactNative from "icons/ReactNative";
 import Tailwindcss from "icons/Tailwindcss";
 import TypeScript from "icons/TypeScript";
-import { FC, useMemo } from "react";
+import { FC, RefObject, useMemo } from "react";
 
-const TechStack: FC = () => {
+export interface TechStackProps {
+  techStackRef: RefObject<HTMLDivElement>;
+}
+
+const TechStack: FC<TechStackProps> = ({ techStackRef }) => {
   const breakpoint = useBreakpoint();
 
   const techs = useMemo(() => {
@@ -91,7 +95,7 @@ const TechStack: FC = () => {
   }, [breakpoint]);
 
   return (
-    <div className="reveal">
+    <div ref={techStackRef} className="reveal">
       <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
         <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
           <span className="text-bluePrimary">03.</span> {"<tech stack>"}

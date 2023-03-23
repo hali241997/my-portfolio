@@ -1,7 +1,11 @@
 import Project from "components/Project";
-import { FC } from "react";
+import { FC, RefObject } from "react";
 
-const Portfolio: FC = () => {
+export interface PortfolioProps {
+  portfolioRef: RefObject<HTMLDivElement>;
+}
+
+const Portfolio: FC<PortfolioProps> = ({ portfolioRef }) => {
   const projects = [
     {
       imagePath: "/images/saas.png",
@@ -46,7 +50,10 @@ const Portfolio: FC = () => {
 
   return (
     <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
-      <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px] reveal">
+      <div
+        ref={portfolioRef}
+        className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px] reveal"
+      >
         <span className="text-bluePrimary">02.</span> {"<portfolio>"}
       </div>
 

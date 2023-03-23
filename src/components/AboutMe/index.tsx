@@ -1,12 +1,16 @@
 import TagCloud, { TagCloudOptions } from "@frank-mayer/react-tag-cloud";
 import useBreakpoint from "hooks/useBreakpoint";
-import { FC } from "react";
+import { FC, RefObject } from "react";
 
-const AboutMe: FC = () => {
+export interface AboutMeProps {
+  aboutMeRef: RefObject<HTMLDivElement>;
+}
+
+const AboutMe: FC<AboutMeProps> = ({ aboutMeRef }) => {
   const breakpoint = useBreakpoint();
 
   return (
-    <div className="reveal">
+    <div ref={aboutMeRef} className="reveal">
       <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
         <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
           <span className="text-bluePrimary">01.</span> {`<about me>`}
