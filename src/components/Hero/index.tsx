@@ -55,7 +55,10 @@ const Hero: FC = () => {
 
       <button
         ref={downArrow}
-        className={clsx("absolute bottom-2 left-1/2 hidden", styles.downArrow)}
+        className={clsx(
+          "absolute bottom-2 left-1/2 hidden md:block",
+          styles.downArrow
+        )}
         onClick={handleDownArrowClick}
       >
         <DownArrow />
