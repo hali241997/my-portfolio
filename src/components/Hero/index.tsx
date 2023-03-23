@@ -6,9 +6,8 @@ import GithubLine from "icons/GithubLine";
 import LinkedInLine from "icons/LinkedInLine";
 import MyEmail from "icons/MyEmail";
 import WhatsappLine from "icons/WhatsappLine";
-import { FC, useCallback, useEffect, useRef } from "react";
+import { FC, useCallback, useEffect, useRef, RefObject } from "react";
 import { constants } from "utils/constants";
-import revealStyles from "../../styles/reveal.module.css";
 import styles from "./hero.module.css";
 
 const Hero: FC = () => {
@@ -28,19 +27,30 @@ const Hero: FC = () => {
   }, []);
 
   useEffect(() => {
+    let starryBgCurrent: RefObject<HTMLDivElement>["current"];
+
+    const moveStars = () => {
+      starryBgCurrent?.classList.replace(styles.fadeIn, styles.stars);
+      setTimeout(() => {
+        breakpoint !== "sm" &&
+          downArrow.current?.classList.replace("hidden", "block");
+      }, 2000);
+    };
+
     if (starryBg.current) {
-      starryBg.current.addEventListener("animationend", () => {
-        starryBg.current?.classList.replace(styles.fadeIn, styles.stars);
-        setTimeout(() => {
-          breakpoint !== "sm" &&
-            downArrow.current?.classList.replace("hidden", "block");
-        }, 2000);
-      });
+      starryBgCurrent = starryBg.current;
+      starryBgCurrent.addEventListener("animationend", moveStars);
     }
+
+    return () => {
+      if (starryBgCurrent) {
+        starryBgCurrent.removeEventListener("animationend", moveStars);
+      }
+    };
   }, [breakpoint]);
 
   return (
-    <div className="w-[100vw] h-[94vh] overflow-hidden relative">
+    <div className="w-[100vw] h-[100vh] pt-[6vh] overflow-hidden relative">
       <div ref={starryBg} className={styles.fadeIn} />
 
       <button
@@ -54,7 +64,7 @@ const Hero: FC = () => {
       <div
         className={clsx(
           "h-[94vh] md:px-[40px] px-[20px] flex items-center",
-          revealStyles.revealContent
+          styles.revealContent
         )}
       >
         <div className="z-10 flex flex-1">

@@ -586,3 +586,19 @@
     transform: translateY(-7px);
   }
 }
+
+.revealContent {
+  animation: revealAnimation 2s;
+  animation-delay: 0;
+}
+
+@keyframes revealAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

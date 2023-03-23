@@ -1,28 +1,39 @@
 import clsx from "clsx";
 import Burger from "icons/Burger";
-import { FC, useCallback, useMemo } from "react";
-import revealStyles from "../../styles/reveal.module.css";
-import { HeaderProps } from "./types";
+import { FC, useCallback, useEffect, useMemo, useState } from "react";
+import headerStyles from "./header.module.css";
 
-const Header: FC<HeaderProps> = ({ height }) => {
+const Header: FC = () => {
   const menu = useMemo(
     () => ["About Me", "Portfolio", "Tech Stack", "Contact Me"],
     []
   );
 
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
+
   const toCode = useCallback((menuItem: string) => {
     return `<${menuItem.toLowerCase()}>`;
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header>
-      <div
-        className={clsx(
-          "hidden items-center justify-end md:flex space-x-5 px-[40px]",
-          revealStyles.revealContent
-        )}
-        style={{ height }}
-      >
+    <header
+      className={clsx("fixed top-0 w-full h-[6vh] z-[99]", {
+        [headerStyles.headerBg]: scrollPosition > 0,
+      })}
+    >
+      <div className="hidden md:flex h-[6vh] items-center justify-end space-x-5 px-[40px]">
         {menu.map((item, index) => {
           return (
             <div key={item} className="flex space-x-2 cursor-pointer">
@@ -35,13 +46,7 @@ const Header: FC<HeaderProps> = ({ height }) => {
         })}
       </div>
 
-      <div
-        className={clsx(
-          "md:hidden items-center px-[20px] flex justify-end",
-          revealStyles.revealContent
-        )}
-        style={{ height }}
-      >
+      <div className="md:hidden flex items-center h-[6vh] justify-end px-[20px]">
         <Burger />
       </div>
     </header>

@@ -22,6 +22,10 @@ const HomePage: FC = () => {
     };
 
     window.addEventListener("scroll", revealContent);
+
+    return () => {
+      window.removeEventListener("scroll", revealContent);
+    };
   }, []);
 
   return (
