@@ -1,10 +1,9 @@
 import AboutMe from "components/AboutMe";
+import ContactMe from "components/ContactMe";
 import Hero from "components/Hero";
-import Quote from "components/Quote";
-import { FC, useEffect } from "react";
-import Services from "components/Services";
-import TechStack from "components/TechStack";
 import Portfolio from "components/Portfolio";
+import TechStack from "components/TechStack";
+import { FC, useEffect } from "react";
 
 const HomePage: FC = () => {
   useEffect(() => {
@@ -31,10 +30,7 @@ const HomePage: FC = () => {
       <AboutMe />
       <Portfolio />
       <TechStack />
-
-      {/* <Quote />
-      <Services />
-       */}
+      <ContactMe />
     </>
   );
 };
