@@ -107,7 +107,7 @@ const Project: FC<ProjectProps> = ({
         <img
           src={imagePath}
           alt="product image"
-          className="absolute -z-10 md:h-[400px] h-[200px] object-contain opacity-5"
+          className="absolute -z-10 md:h-[400px] h-[200px] object-contain opacity-20"
         />
 
         <div className="px-2 md:px-6">
@@ -135,13 +135,13 @@ const Project: FC<ProjectProps> = ({
             )}
           </div>
 
-          <div className="md:text-[15px] text-[10px] font-RobotoMono md:mb-10 mb-3">
+          <div className="md:text-[15px] text-[10px] font-RobotoMono md:mb-10 mb-3 text-[#dbdbdb]">
             {description}
           </div>
 
           <div className="flex space-x-4 md:text-[14px] text-[10px] font-RobotoMono flex-wrap">
             {tags.map((tag) => (
-              <div key={tag} className="mb-2 text-center">
+              <div key={tag} className="mb-2 text-center text-[#dbdbdb]">
                 {tag}
               </div>
             ))}
