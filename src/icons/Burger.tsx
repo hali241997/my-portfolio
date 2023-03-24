@@ -1,15 +1,10 @@
-import { useTheme } from "next-themes";
 import { FC } from "react";
 
-export interface BurgerProps {
-  theme: "dark" | "light";
-}
-
-const Burger: FC<BurgerProps> = ({ theme }) => {
+const Burger: FC = () => {
   return (
     <svg
       fill="none"
-      stroke={theme === "dark" ? "#FAF9F6" : "#121212"}
+      stroke="#FAF9F6"
       width="24"
       height="24"
       strokeWidth="1.5"

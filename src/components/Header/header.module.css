@@ -1,0 +1,4 @@
+.headerBg {
+  transition: background 0.5s ease-in-out;
+  background-color: #121212;
+}

@@ -1,9 +1,10 @@
 import { FC } from "react";
+import { IconProps } from "./types";
 
-const MaterialUI: FC = () => {
+const MaterialUI: FC<IconProps> = ({ width = "100" }) => {
   return (
     <svg
-      width="100"
+      width={width}
       preserveAspectRatio="xMidYMid"
       version="1.1"
       viewBox="0 -26 256 256"

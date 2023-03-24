@@ -1,8 +1,9 @@
 import { FC } from "react";
+import { IconProps } from "./types";
 
-const Monogdb: FC = () => {
+const Monogdb: FC<IconProps> = ({ width }) => {
   return (
-    <svg viewBox="0 0 128 128" width="100">
+    <svg viewBox="0 0 128 128" width={width}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

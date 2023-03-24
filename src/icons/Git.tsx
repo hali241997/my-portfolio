@@ -1,8 +1,9 @@
 import { FC } from "react";
+import { IconProps } from "./types";
 
-const Git: FC = () => {
+const Git: FC<IconProps> = ({ width }) => {
   return (
-    <svg fill="none" width="100" viewBox="0 0 128 128">
+    <svg fill="none" width={width} viewBox="0 0 128 128">
       <g clipPath="url(#a)">
         <path
           fill="#FFF"

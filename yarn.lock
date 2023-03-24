@@ -29,6 +29,13 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.35.0.tgz#b7569632b0b788a0ca0e438235154e45d42813a7"
   integrity sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==
 
+"@frank-mayer/react-tag-cloud@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@frank-mayer/react-tag-cloud/-/react-tag-cloud-1.1.1.tgz#280d248fdac5dfd45b1398302729c46b59f0663e"
+  integrity sha512-biNTK45+Q7t82NTZoh/Lkviu/azRPhTvpSq0EIOdTzrSYQRgoBG+OMAG0+QuiT8tiqVQNlqg6k8lOqfQglYEvw==
+  dependencies:
+    TagCloud "^2.3.0"
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.11.8.tgz#03595ac2075a4dc0f191cc2131de14fbd7d410b9"
@@ -249,6 +256,11 @@
   dependencies:
     "@typescript-eslint/types" "5.54.1"
     eslint-visitor-keys "^3.3.0"
+
+TagCloud@^2.3.0:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/TagCloud/-/TagCloud-2.3.2.tgz#2f5e6d58f58d3ec060791ebeca6ac604b50f246e"
+  integrity sha512-WMnfCyRCjAejqTBHR3EVcA02nCOhoD1HEEU+KHS7m9Oj/t4IcOKTjklyOadTibeGRA4poK/rxwuO4g61qZvObA==
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
@@ -1634,11 +1646,6 @@ natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
-
-next-themes@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.2.1.tgz#0c9f128e847979daf6c67f70b38e6b6567856e45"
-  integrity sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==
 
 next@13.2.3:
   version "13.2.3"
