@@ -71,15 +71,27 @@ const Hero: FC = () => {
           <div className="flex flex-col space-y-10">
             <div className="lg:h-[50px] md:h-[200px] h-[150px] w-[1px] flex self-center bg-bluePrimary" />
 
-            <a className="cursor-pointer" href={constants.githubLink}>
+            <a
+              className="cursor-pointer"
+              href={constants.githubLink}
+              target="_blank"
+            >
               <GithubLine />
             </a>
 
-            <a className="cursor-pointer" href={constants.whatsappLink}>
+            <a
+              className="cursor-pointer"
+              href={constants.whatsappLink}
+              target="_blank"
+            >
               <WhatsappLine />
             </a>
 
-            <a className="cursor-pointer" href={constants.linkedInLink}>
+            <a
+              className="cursor-pointer"
+              href={constants.linkedInLink}
+              target="_blank"
+            >
               <LinkedInLine />
             </a>
 
@@ -124,7 +136,7 @@ const Hero: FC = () => {
           <div className="flex flex-col space-y-10">
             <div className="lg:h-[50px] md:h-[200px] h-[150px] w-[1px] flex self-center bg-bluePrimary" />
 
-            <a href={constants.mailToLink}>
+            <a href={constants.mailToLink} target="_blank">
               <MyEmail />
             </a>
 
