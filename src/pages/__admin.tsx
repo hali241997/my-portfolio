@@ -8,7 +8,7 @@ const Admin: FC = () => {
       <br />
       <br />
       <br />
-      <h1 className="text-[50px]">
+      <h1 className="text-[50px] text-center">
         Please contact me on whatsapp for a discounted price: +923217738854
       </h1>
       <br />
