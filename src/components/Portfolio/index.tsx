@@ -30,22 +30,22 @@ const Portfolio: FC<PortfolioProps> = ({ portfolioRef }) => {
         "Collaborating on app development for Italian NGOs, consolidating all platforms into one. Currently in Phase 2 and committed to delivering top-quality results.",
       tags: ["JavaScript", "React Native", "Redux", "Axois", "Secure Storage"],
     },
-    {
-      imagePath: "/images/circle-it.png",
-      projectName: "CircleIt",
-      description:
-        "Developing CircleIt, an app for time-based greetings, utilizing advanced technologies (native-base, instabug-reactnative, react-native-fast-image, react-native-sound) for seamless user experience.",
-      tags: [
-        "JavaScript",
-        "React Native",
-        "Redux",
-        "Secure Storage",
-        "Native Base",
-      ],
-      androidLink:
-        "https://play.google.com/store/apps/details?id=com.circleit&hl=en",
-      iosLink: "https://apps.apple.com/us/app/circleit/id1329263554",
-    },
+    // {
+    //   imagePath: "/images/circle-it.png",
+    //   projectName: "CircleIt",
+    //   description:
+    //     "Developing CircleIt, an app for time-based greetings, utilizing advanced technologies (native-base, instabug-reactnative, react-native-fast-image, react-native-sound) for seamless user experience.",
+    //   tags: [
+    //     "JavaScript",
+    //     "React Native",
+    //     "Redux",
+    //     "Secure Storage",
+    //     "Native Base",
+    //   ],
+    //   androidLink:
+    //     "https://play.google.com/store/apps/details?id=com.circleit&hl=en",
+    //   iosLink: "https://apps.apple.com/us/app/circleit/id1329263554",
+    // },
   ];
 
   return (
