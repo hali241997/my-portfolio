@@ -1,15 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.plugins.push(
-        new (require("webpack").IgnorePlugin)(/__admin\.tsx$/)
-      );
-    }
-
-    return config;
-  },
+  pageExtensions: ["_app.tsx", "_document.tsx", "index.tsx"],
 };
 
 module.exports = nextConfig;
