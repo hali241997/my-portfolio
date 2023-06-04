@@ -7,6 +7,8 @@ const nextConfig = {
         new (require("webpack").IgnorePlugin)(/__admin\.tsx$/)
       );
     }
+
+    return config;
   },
 };
 
