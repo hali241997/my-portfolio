@@ -6,8 +6,7 @@ const LinkedInLine: FC = () => {
 
   return (
     <svg
-      width={breakpoint === "sm" ? "30" : "40"}
-      height="40"
+      width={breakpoint === "sm" ? "30" : "35"}
       fill="#194EFB"
       viewBox="0 0 1920 1920"
     >

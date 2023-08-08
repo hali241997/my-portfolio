@@ -9,6 +9,8 @@ import WhatsappLine from "icons/WhatsappLine";
 import { FC, useCallback, useEffect, useRef, RefObject } from "react";
 import { constants } from "utils/constants";
 import styles from "./hero.module.css";
+import FiverrLine from "icons/FiverrLine";
+import UpworkLine from "icons/UpworkLine";
 
 const Hero: FC = () => {
   const breakpoint = useBreakpoint();
@@ -68,7 +70,7 @@ const Hero: FC = () => {
         )}
       >
         <div className="z-10 flex flex-1">
-          <div className="flex flex-col space-y-10">
+          <div className="flex flex-col items-center space-y-6">
             <div className="lg:h-[50px] md:h-[200px] h-[150px] w-[1px] flex self-center bg-bluePrimary" />
 
             <a
@@ -77,6 +79,22 @@ const Hero: FC = () => {
               target="_blank"
             >
               <GithubLine />
+            </a>
+
+            <a
+              className="cursor-pointer"
+              href={constants.fiverrLink}
+              target="_blank"
+            >
+              <FiverrLine />
+            </a>
+
+            <a
+              className="cursor-pointer"
+              href={constants.upworkLink}
+              target="_blank"
+            >
+              <UpworkLine />
             </a>
 
             <a
@@ -134,13 +152,13 @@ const Hero: FC = () => {
           </div>
 
           <div className="flex flex-col space-y-10">
-            <div className="lg:h-[50px] md:h-[200px] h-[150px] w-[1px] flex self-center bg-bluePrimary" />
+            <div className="lg:h-[70px] md:h-[230px] h-[165px] w-[1px] flex self-center bg-bluePrimary" />
 
             <a href={constants.mailToLink} target="_blank">
               <MyEmail />
             </a>
 
-            <div className="lg:h-[50px] md:h-[200px] h-[136px] w-[1px] flex self-center bg-bluePrimary" />
+            <div className="lg:h-[70px] md:h-[230px] h-[165px] w-[1px] flex self-center bg-bluePrimary" />
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ const GithubLine: FC = () => {
 
   return (
     <svg
-      width={breakpoint === "sm" ? "30" : "40"}
+      width={breakpoint === "sm" ? "30" : "36"}
       fill="none"
       viewBox="0 0 17 20"
     >
