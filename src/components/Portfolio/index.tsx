@@ -21,7 +21,7 @@ const projects = [
     role: "Full Stack Engineer",
     description:
       "Stripe-powered escrow platform for clients and freelancers — fund contracts upfront, release payments after review, and resolve disputes fairly.",
-    tags: ["React.js", "Next.js", "Nest.js", "Stripe", "AWS"],
+    tags: ["React.js", "Next.js", "NestJS", "Stripe", "AWS"],
     link: "https://pendfunds.com/",
   },
   {

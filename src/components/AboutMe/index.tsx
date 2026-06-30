@@ -31,7 +31,7 @@ const AboutMe: FC<AboutMeProps> = ({ aboutMeRef }) => {
               for US, UK, and enterprise clients.
               <br />
               <br />
-              I specialize in React and Next.js frontends, Nest.js and Node.js
+              I specialize in React and Next.js frontends, NestJS and Node.js
               backends, and React Native for mobile — building applications that
               are performant, maintainable, and accessible.
               <br />
@@ -72,10 +72,10 @@ const AboutMe: FC<AboutMeProps> = ({ aboutMeRef }) => {
                   breakpoint === "xl" || breakpoint === "lg"
                     ? 400
                     : breakpoint === "sm"
-                    ? 300
-                    : 600,
+                      ? 300
+                      : 600,
                   w.innerWidth,
-                  w.innerHeight
+                  w.innerHeight,
                 ) / 2,
               initSpeed: "fast",
             })}
@@ -90,10 +90,10 @@ const AboutMe: FC<AboutMeProps> = ({ aboutMeRef }) => {
                 breakpoint === "xl"
                   ? "20px"
                   : breakpoint === "lg"
-                  ? "20px"
-                  : breakpoint === "md"
-                  ? "20px"
-                  : "16px",
+                    ? "20px"
+                    : breakpoint === "md"
+                      ? "20px"
+                      : "16px",
             }}
           >
             {[

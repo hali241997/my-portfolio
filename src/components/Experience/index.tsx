@@ -20,7 +20,7 @@ const experiences = [
     role: "Lead Engineer",
     period: "Apr 2023 – Jul 2025",
     bullets: [
-      "Built and launched Pendfunds.com, Vulkan Solutions, and Adacta.ai from scratch using React, Next.js, Strapi, and Nest.js.",
+      "Built and launched Pendfunds.com, Vulkan Solutions, and Adacta.ai from scratch using React, Next.js, Strapi, and NestJS.",
       "Integrated AI features into Adacta.ai, contributing to a 15% increase in product growth.",
       "Led technical strategy, client communication, and delivery for US and UK-based clients.",
     ],
