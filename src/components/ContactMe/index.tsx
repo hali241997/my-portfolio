@@ -3,6 +3,7 @@ import Input from "components/Input";
 import TextArea from "components/TextArea";
 import { useFormik } from "formik";
 import { FC, RefObject } from "react";
+import { constants } from "utils/constants";
 import { showFieldError } from "utils/form";
 import { formInitialValues, formValidationSchema } from "./form";
 import { FormValues } from "./types";
@@ -14,8 +15,11 @@ export interface ContactMeProps {
 const ContactMe: FC<ContactMeProps> = ({ contactMeRef }) => {
   const handleSubmit = (values: FormValues) => {
     window.open(
-      `mailto:mhali241997@gmail.com?subject=${values.subject}&body=${values.message}`,
-      "_blank"
+      `mailto:mhali241997@gmail.com?subject=${encodeURIComponent(
+        values.subject ?? ""
+      )}&body=${encodeURIComponent(values.message ?? "")}`,
+      "_blank",
+      "noopener,noreferrer"
     );
   };
 
@@ -29,11 +33,23 @@ const ContactMe: FC<ContactMeProps> = ({ contactMeRef }) => {
     <div ref={contactMeRef} className="reveal">
       <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
         <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
-          <span className="text-bluePrimary">04.</span> {"<contact me>"}
+          <span className="text-bluePrimary">05.</span> {"<contact me>"}
         </div>
 
         <div className="lg:px-[50px] mb-10 font-RobotoMono">
-          Feel free to drop me a message
+          Open to remote and relocation opportunities. Feel free to drop me a
+          message.
+        </div>
+
+        <div className="lg:px-[50px] mb-10 font-RobotoMono">
+          <a
+            href={constants.linkedInLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-bluePrimary hover:underline"
+          >
+            Connect on LinkedIn
+          </a>
         </div>
 
         <div className="flex flex-col flex-1 space-y-5 lg:mx-[100px]">

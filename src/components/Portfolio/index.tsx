@@ -7,51 +7,65 @@ export interface PortfolioProps {
 
 const projects = [
   {
-    imagePath: "/images/saas.png",
-    projectName: "GudangAda SaaS Web Solusi",
+    imagePath: "/images/adacta-ai.png",
+    projectName: "Adacta.ai",
+    role: "Full Stack Developer",
     description:
-      "A SaaS web app for Indonesia that connects wholesalers and retailers in the FMCG market. Made the product using Next.js with Material UI in a mono-repository structure",
-    tags: ["TypeScript", "Next.js", "Material UI", "React", "Redux"],
-    link: "https://websolusi.gudangada.com/",
+      "AI-driven personal assistant that organizes documents, emails, and tasks in one place — with smart reminders, AI chat, and proactive planning.",
+    tags: ["React.js", "Next.js", "Prisma", "PostgreSQL", "OpenAI"],
+    link: "https://app.adacta.ai/",
   },
   {
-    imagePath: "/images/saas-landing.png",
-    projectName: "GudangAda SaaS Web Solusi Landing",
+    imagePath: "/images/pendfunds.png",
+    projectName: "Pendfunds",
+    role: "Full Stack Engineer",
     description:
-      "The landing page for the SaaS app for Indonesia that connects wholesalers to retailers in the FMCG market. Made the product using Next.js with Tailwind CSS",
-    tags: ["TypeScript", "Next.js", "Tailwind CSS", "React"],
-    link: "https://solusi.gudangada.com/",
+      "Stripe-powered escrow platform for clients and freelancers — fund contracts upfront, release payments after review, and resolve disputes fairly.",
+    tags: ["React.js", "Next.js", "Nest.js", "Stripe", "AWS"],
+    link: "https://pendfunds.com/",
   },
   {
-    imagePath: "/images/circle-it.png",
+    imagePath: "/images/gudangada.png",
+    projectName: "GudangAda SaaS",
+    role: "Frontend Engineer → Frontend Team Lead",
+    description:
+      "SaaS platform connecting FMCG wholesalers and retailers in Indonesia — inventory, sales tracking, stock alerts, and business reporting in one place.",
+    tags: ["React.js", "Next.js", "Material UI", "CI/CD", "Vercel"],
+    link: "https://gudangada.com/",
+  },
+  {
+    imagePath: "/images/vulkan-solutions-2.png",
+    projectName: "Vulkan Solutions",
+    role: "Full Stack Engineer",
+    description:
+      "Modern, animated marketing site showcasing IT services, process, and credibility — built for strong visual storytelling and performance.",
+    tags: ["React.js", "Next.js", "Strapi", "Framer Motion", "Vercel"],
+    link: "https://www.vulkansolutions.com/",
+  },
+  {
+    imagePath: "/images/circle-it-2.png",
     projectName: "CircleIt",
+    role: "Full Stack Engineer",
     description:
-      "Developing CircleIt, an app for time-based greetings, utilizing advanced technologies (native-base, instabug-reactnative, react-native-fast-image, react-native-sound) for seamless user experience.",
-    tags: [
-      "JavaScript",
-      "React Native",
-      "Redux",
-      "Secure Storage",
-      "Native Base",
-    ],
+      "Cross-generational messaging app for scheduling messages, birthday cards, e-gifts, and flowers for future life moments.",
+    tags: ["React Native", "Firebase", "Node.js", "Socket.io", "MySQL"],
     androidLink:
       "https://play.google.com/store/apps/details?id=com.circleit&hl=en",
     iosLink: "https://apps.apple.com/us/app/circleit/id1329263554",
   },
   {
-    imagePath: "/images/vulkan-solutions.png",
-    projectName: "Vulkan Solutions",
-    description:
-      "Vulkan Solutions specializes in delivering custom software solutions to businesses of all sizes. Their experienced developers and designers are passionate to build future and committed to deliver the best services to our clients",
-    tags: ["TypeScript", "Next.js", "Tailwind CSS", "React"],
-    link: "https://vulkansolutions.com/",
-  },
-  {
-    imagePath: "/images/seerene.png",
+    imagePath: "/images/seerene-2.png",
     projectName: "Seerene",
+    role: "React Native Engineer",
     description:
-      "Collaborating on app development for Italian NGOs, consolidating all platforms into one. Currently in Phase 2 and committed to delivering top-quality results.",
-    tags: ["JavaScript", "React Native", "Redux", "Axois", "Secure Storage"],
+      "Mobile app for NGOs and patients to book medical transport, manage profiles, and handle payments for hospital and dialysis visits.",
+    tags: [
+      "React Native",
+      "Google Maps",
+      "Stripe",
+      "Google Auth",
+      "Facebook Auth",
+    ],
   },
 ];
 
@@ -62,7 +76,7 @@ const Portfolio: FC<PortfolioProps> = ({ portfolioRef }) => {
         ref={portfolioRef}
         className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px] reveal"
       >
-        <span className="text-bluePrimary">02.</span> {"<portfolio>"}
+        <span className="text-bluePrimary">03.</span> {"<portfolio>"}
       </div>
 
       <div className="lg:mx-[100px] lg:space-y-[150px] space-y-[50px] block">

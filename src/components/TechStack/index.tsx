@@ -1,17 +1,17 @@
 import Skill from "components/Skill";
 import useBreakpoint from "hooks/useBreakpoint";
-import Expo from "icons/Expo";
 import Expressjs from "icons/Expressjs";
 import Firebase from "icons/Firebase";
 import Git from "icons/Git";
 import Github from "icons/Github";
 import JavaScript from "icons/JavaScript";
 import MaterialUI from "icons/MaterialUI";
-import Monogdb from "icons/Monogdb";
+import Mongodb from "icons/Mongodb";
 import MySQL from "icons/MySQL";
 import Nestjs from "icons/Nestjs";
 import Nextjs from "icons/Nextjs";
 import Nodejs from "icons/Nodejs";
+import PostgreSQL from "icons/PostgreSQL";
 import Reactjs from "icons/Reactjs";
 import ReactNative from "icons/ReactNative";
 import Tailwindcss from "icons/Tailwindcss";
@@ -44,10 +44,6 @@ const TechStack: FC<TechStackProps> = ({ techStackRef }) => {
         name: "React Native",
       },
       {
-        component: <Expo width={breakpoint === "sm" ? "58" : "116"} />,
-        name: "Expo",
-      },
-      {
         component: <Nextjs width={breakpoint === "sm" ? "50" : "100"} />,
         name: "Next.js",
       },
@@ -65,7 +61,7 @@ const TechStack: FC<TechStackProps> = ({ techStackRef }) => {
       },
       {
         component: <Nestjs width={breakpoint === "sm" ? "50" : "100"} />,
-        name: "Nest.js",
+        name: "NestJS",
       },
       {
         component: <Expressjs width={breakpoint === "sm" ? "50" : "100"} />,
@@ -76,15 +72,19 @@ const TechStack: FC<TechStackProps> = ({ techStackRef }) => {
         name: "MySQL",
       },
       {
+        component: <PostgreSQL width={breakpoint === "sm" ? "50" : "100"} />,
+        name: "PostgreSQL",
+      },
+      {
         component: <Git width={breakpoint === "sm" ? "50" : "100"} />,
         name: "Git",
       },
       {
         component: <Github width={breakpoint === "sm" ? "50" : "100"} />,
-        name: "Github",
+        name: "GitHub",
       },
       {
-        component: <Monogdb width={breakpoint === "sm" ? "50" : "100"} />,
+        component: <Mongodb width={breakpoint === "sm" ? "50" : "100"} />,
         name: "MongoDB",
       },
       {
@@ -98,7 +98,7 @@ const TechStack: FC<TechStackProps> = ({ techStackRef }) => {
     <div ref={techStackRef} className="reveal">
       <div className="md:py-[60px] py-[40px] px-[20px] md:px-[40px]">
         <div className="font-bold font-SourceCodePro lg:text-[36px] md:text-[26px] text-[20px] mb-[40px]">
-          <span className="text-bluePrimary">03.</span> {"<tech stack>"}
+          <span className="text-bluePrimary">04.</span> {"<tech stack>"}
         </div>
 
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">

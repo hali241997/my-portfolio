@@ -6,6 +6,13 @@ export interface AboutMeProps {
   aboutMeRef: RefObject<HTMLDivElement>;
 }
 
+const stats = [
+  { value: "40%", label: "SEO improvement" },
+  { value: "30%", label: "Conversion boost" },
+  { value: "2x", label: "Faster exports" },
+  { value: "70%", label: "Fewer post-release bugs" },
+];
+
 const AboutMe: FC<AboutMeProps> = ({ aboutMeRef }) => {
   const breakpoint = useBreakpoint();
 
@@ -19,26 +26,42 @@ const AboutMe: FC<AboutMeProps> = ({ aboutMeRef }) => {
         <div className="flex flex-col lg:flex-row">
           <div className="flex flex-col flex-2 lg:mr-[40px]">
             <div className="font-RobotoMono md:text-[20px] text-[16px] md:text-left text-center">
-              I&apos;ve been sailing the web and mobile development seas ever
-              since my student years more than 5 years ago. I&apos;ve been
-              creating everything from regular websites and dashboards, all the
-              way to complex mobile applications and open-source libraries.
+              I&apos;m a Senior Full-Stack Engineer with 6+ years of experience
+              shipping SaaS platforms, AI-integrated products, and mobile apps
+              for US, UK, and enterprise clients.
               <br />
               <br />
-              The main characteristic of my work one could give for all my these
-              years has been simple:
+              I specialize in React and Next.js frontends, Nest.js and Node.js
+              backends, and React Native for mobile — building applications that
+              are performant, maintainable, and accessible.
               <br />
               <br />
-              <span className="text-bluePrimary md:text-[26px] text-[20px] font-[800]">
-                Get 💩 done. Fast.
+              Recently at UX Pilot AI, shipping AI-powered design tooling. At
+              HetraByte, I built Adacta.ai and Pendfunds from scratch. At
+              MobileLive, I improved Staples&apos; e-commerce SEO by 40% and
+              conversions by 30%. At GudangAda, I was promoted to Team Lead
+              while driving a 40% increase in client adoption.
+              <br />
+              <br />
+              <span className="text-bluePrimary md:text-[22px] text-[18px] font-[800]">
+                Clean code. Fast delivery. Measurable impact.
               </span>
-              <br />
-              <br />I have a proven ability to write clean and modern JS/TS code
-              with a strict code style, and at a fast pace. My expertise in web
-              development ranges from the early days of jQuery, PHP, and plain
-              CSS, to the current React.js/Next.js and NestJS frameworks. By
-              utilizing these technologies appropriately, I strive to create
-              applications that are simplified, maintainable, and accessible.
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 mt-10 md:grid-cols-4">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="p-4 text-center rounded bg-[rgba(25,78,251,0.15)]"
+                >
+                  <div className="text-[24px] font-bold text-bluePrimary font-RobotoMono md:text-[28px]">
+                    {stat.value}
+                  </div>
+                  <div className="text-[12px] text-gray-400 font-RobotoMono md:text-[14px]">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -74,22 +97,26 @@ const AboutMe: FC<AboutMeProps> = ({ aboutMeRef }) => {
             }}
           >
             {[
-              "HTML",
-              "CSS",
               "React.js",
               "React Native",
               "JavaScript",
               "TypeScript",
               "Next.js",
               "NestJS",
-              "REST",
-              "GraphQL",
-              "Express.js",
               "Node.js",
-              "VSCode",
-              "Git",
-              "Github",
+              "Express.js",
+              "PostgreSQL",
+              "Prisma",
+              "Strapi",
+              "Stripe",
+              "OpenAI",
+              "Tailwind CSS",
+              "Material UI",
+              "GraphQL",
               "Redux.js",
+              "CI/CD",
+              "Git",
+              "GitHub",
             ]}
           </TagCloud>
         </div>

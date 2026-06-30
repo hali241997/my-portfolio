@@ -15,6 +15,7 @@ import headerStyles from "./header.module.css";
 
 export interface HeaderProps {
   aboutMeRef: RefObject<HTMLDivElement>;
+  experienceRef: RefObject<HTMLDivElement>;
   portfolioRef: RefObject<HTMLDivElement>;
   techStackRef: RefObject<HTMLDivElement>;
   contactMeRef: RefObject<HTMLDivElement>;
@@ -22,6 +23,7 @@ export interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({
   aboutMeRef,
+  experienceRef,
   portfolioRef,
   techStackRef,
   contactMeRef,
@@ -29,11 +31,12 @@ const Header: FC<HeaderProps> = ({
   const menu = useMemo(
     () => [
       { menu: "About Me", ref: aboutMeRef },
+      { menu: "Experience", ref: experienceRef },
       { menu: "Portfolio", ref: portfolioRef },
       { menu: "Tech Stack", ref: techStackRef },
       { menu: "Contact Me", ref: contactMeRef },
     ],
-    [aboutMeRef, contactMeRef, portfolioRef, techStackRef]
+    [aboutMeRef, contactMeRef, experienceRef, portfolioRef, techStackRef]
   );
 
   const [scrollPosition, setScrollPosition] = useState<number>(0);
