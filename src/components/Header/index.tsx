@@ -10,7 +10,6 @@ import {
   useMemo,
   useState,
 } from "react";
-import { toCode } from "utils/conversion";
 import headerStyles from "./header.module.css";
 
 export interface HeaderProps {
@@ -46,25 +45,9 @@ const Header: FC<HeaderProps> = ({
     setDrawerOpen((val) => !val);
   }, []);
 
-  const handleClick = useCallback(
-    (index: number) => {
-      toggleDrawer();
-      const item = menu[index];
-
-      if (item.ref.current) {
-        const current = item.ref.current;
-
-        if (current.classList.contains("active")) {
-          current.scrollIntoView({ behavior: "smooth" });
-        } else {
-          const rect = current.getBoundingClientRect();
-          const offset = window.scrollY + rect.top - 0.4 * window.innerHeight;
-          window.scrollTo({ top: offset, behavior: "smooth" });
-        }
-      }
-    },
-    [menu, toggleDrawer]
-  );
+  const closeDrawer = useCallback(() => {
+    setDrawerOpen(false);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,37 +67,36 @@ const Header: FC<HeaderProps> = ({
         [headerStyles.headerBg]: scrollPosition > 0,
       })}
     >
-      <div className="hidden md:flex h-[6vh] items-center justify-end space-x-5 px-[40px]">
-        {menu.map((item, index) => {
-          return <MenuItem key={item.menu} item={item} index={index} />;
-        })}
-      </div>
-
-      <div className="md:hidden flex items-center h-[6vh] justify-end px-[20px]">
-        <button onClick={toggleDrawer}>
+      <div className="flex h-[6vh] items-center justify-end px-[20px] md:px-[40px]">
+        <button
+          type="button"
+          className="md:hidden"
+          onClick={toggleDrawer}
+          aria-expanded={drawerOpen}
+          aria-controls="main-nav"
+          aria-label={drawerOpen ? "Close menu" : "Open menu"}
+        >
           {drawerOpen ? <Cross /> : <Burger />}
         </button>
-      </div>
 
-      <div
-        className={clsx("fixed inset-x-0 w-full bg-darkPrimary", {
-          ["hidden"]: !drawerOpen,
-        })}
-      >
-        {menu.map((item, index) => {
-          return (
-            <div
+        <nav
+          id="main-nav"
+          aria-label="Main navigation"
+          className={clsx(
+            "fixed inset-x-0 top-[6vh] w-full bg-darkPrimary flex flex-col",
+            "md:static md:top-auto md:flex md:flex-row md:items-center md:space-x-5 md:bg-transparent",
+            drawerOpen ? "flex" : "hidden md:flex"
+          )}
+        >
+          {menu.map((item, index) => (
+            <MenuItem
               key={item.menu}
-              className="flex px-6 py-2 space-x-2 cursor-pointer"
-              onClick={() => handleClick(index)}
-            >
-              <div className="text-bluePrimary font-SourceCodePro">
-                {(index + 1).toString().padStart(2, "0")}.
-              </div>
-              <div className="font-SourceCodePro">{toCode(item.menu)}</div>
-            </div>
-          );
-        })}
+              item={item}
+              index={index}
+              onNavigate={closeDrawer}
+            />
+          ))}
+        </nav>
       </div>
     </header>
   );

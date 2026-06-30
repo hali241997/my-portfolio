@@ -4,9 +4,10 @@ import { toCode } from "utils/conversion";
 export interface MenuItemProps {
   item: { menu: string; ref: RefObject<HTMLDivElement> };
   index: number;
+  onNavigate?: () => void;
 }
 
-const MenuItem: FC<MenuItemProps> = ({ item, index }) => {
+const MenuItem: FC<MenuItemProps> = ({ item, index, onNavigate }) => {
   const borderBottomRef = useRef<HTMLDivElement>(null);
 
   const handleMouseEnter = useCallback(() => {
@@ -33,11 +34,13 @@ const MenuItem: FC<MenuItemProps> = ({ item, index }) => {
         window.scrollTo({ top: offset, behavior: "smooth" });
       }
     }
-  }, [item.ref]);
+
+    onNavigate?.();
+  }, [item.ref, onNavigate]);
 
   return (
     <div
-      className="flex space-x-2 cursor-pointer h-[6vh] items-center relative"
+      className="flex px-6 py-2 space-x-2 cursor-pointer relative md:px-0 md:py-0 md:h-[6vh] md:items-center"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={handleClick}
