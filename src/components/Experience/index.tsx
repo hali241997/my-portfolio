@@ -8,7 +8,7 @@ const experiences = [
   {
     company: "UX Pilot AI",
     role: "Senior JavaScript Developer",
-    period: "Jul 2025 – Jun 2026",
+    period: "Jul 2025 – Present",
     bullets: [
       "Enhanced Figma-to-HTML export reliability by 40% and sped up exports by 2x through pipeline optimizations.",
       "Drove 50% more React prototype usage by shipping the HTML-to-React pipeline and React Focus Mode.",
