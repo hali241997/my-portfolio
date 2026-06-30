@@ -27,168 +27,126 @@ const Project: FC<ProjectProps> = ({
   androidLink,
   iosLink,
 }) => {
-  const imageContent = (
+  const imageWrapperClassName = clsx(
+    "absolute inset-0 -z-10 flex items-center justify-center",
+    "lg:static lg:z-auto lg:flex-1 lg:min-h-[280px] lg:p-4 lg:rounded lg:bg-[rgba(25,78,251,0.08)]",
+    link && "pointer-events-none lg:pointer-events-auto lg:hover:cursor-pointer"
+  );
+
+  const imageClassName = clsx(
+    "object-contain w-full rounded",
+    "h-[200px] md:h-[400px] opacity-20",
+    "lg:h-full lg:opacity-100"
+  );
+
+  const image = (
     <img
       src={imagePath}
       alt={`${projectName} screenshot`}
-      className="object-contain w-full h-full rounded"
+      className={imageClassName}
     />
   );
 
   return (
-    <div className="reveal">
+    <div
+      className={clsx(
+        "reveal relative flex items-center min-h-[200px] md:min-h-[400px] lg:min-h-0 lg:flex",
+        {
+          "lg:flex-row": isEven,
+          "lg:flex-row-reverse": !isEven,
+        }
+      )}
+    >
+      {link ? (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={imageWrapperClassName}
+        >
+          {image}
+        </a>
+      ) : (
+        <div className={imageWrapperClassName}>{image}</div>
+      )}
+
       <div
-        key={description}
-        className={clsx("lg:flex hidden", {
-          "flex-row": isEven,
-          "flex-row-reverse": !isEven,
-        })}
-      >
-        {link ? (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-1 hover:cursor-pointer relative min-h-[280px] p-4 rounded bg-[rgba(25,78,251,0.08)]"
-          >
-            {imageContent}
-          </a>
-        ) : (
-          <div className="flex flex-1 relative min-h-[280px] p-4 rounded bg-[rgba(25,78,251,0.08)]">
-            {imageContent}
-          </div>
+        className={clsx(
+          "relative z-10 flex flex-col flex-1 space-y-3 md:space-y-4",
+          "px-2 md:px-6 lg:px-0 lg:justify-center",
+          {
+            "lg:items-end": isEven,
+            "lg:items-start": !isEven,
+          }
         )}
+      >
+        <div className="flex items-center space-x-4 mb-3 md:mb-10 lg:mb-0">
+          <div>
+            <div className="text-[12px] md:text-[20px] lg:text-[26px] font-RobotoMono font-bold">
+              {projectName}
+            </div>
+            {role && (
+              <div className="text-[10px] md:text-[12px] lg:text-[14px] text-gray-400 font-RobotoMono">
+                {role}
+              </div>
+            )}
+          </div>
+
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <Exit />
+            </a>
+          )}
+
+          {androidLink && (
+            <a
+              href={androidLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Android />
+            </a>
+          )}
+
+          {iosLink && (
+            <a
+              href={iosLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-[0.5px] lg:mb-1"
+            >
+              <Ios />
+            </a>
+          )}
+        </div>
 
         <div
           className={clsx(
-            "z-10 flex flex-col justify-center flex-1 space-y-4",
+            "font-RobotoMono mb-3 md:mb-10 lg:mb-0",
+            "text-[10px] md:text-[15px] lg:text-[15px]",
+            "text-[#dbdbdb] lg:text-inherit",
+            "lg:p-6 lg:rounded lg:bg-[rgba(25,78,251,0.7)]",
             {
-              "items-end": isEven,
-              "items-start": !isEven,
+              "lg:text-right lg:-ml-[60px]": isEven,
+              "lg:text-left lg:-mr-[60px]": !isEven,
             }
           )}
         >
-          <div className="flex items-center space-x-4">
-            <div>
-              <div className="text-[26px] font-RobotoMono font-bold">
-                {projectName}
-              </div>
-              {role && (
-                <div className="text-[14px] text-gray-400 font-RobotoMono">
-                  {role}
-                </div>
-              )}
-            </div>
-
-            {link && (
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <Exit />
-              </a>
-            )}
-
-            {androidLink && (
-              <a
-                href={androidLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Android />
-              </a>
-            )}
-
-            {iosLink && (
-              <a
-                href={iosLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mb-1"
-              >
-                <Ios />
-              </a>
-            )}
-          </div>
-
-          <div
-            className={clsx(
-              "p-6 rounded bg-[rgba(25,78,251,0.7)] font-RobotoMono text-[15px]",
-              {
-                "text-right -ml-[60px]": isEven,
-                "text-left -mr-[60px]": !isEven,
-              }
-            )}
-          >
-            {description}
-          </div>
-
-          <div className="flex flex-wrap space-x-4 text-[14px] font-RobotoMono">
-            {tags.map((tag) => (
-              <div key={tag} className="text-center">
-                {tag}
-              </div>
-            ))}
-          </div>
+          {description}
         </div>
-      </div>
 
-      <div className="md:h-[400px] h-[200px] flex items-center relative lg:hidden">
-        <img
-          src={imagePath}
-          alt={`${projectName} screenshot`}
-          className="absolute -z-10 md:h-[400px] h-[200px] object-contain opacity-20"
-        />
-
-        <div className="px-2 md:px-6">
-          <div className="flex items-center mb-3 space-x-4 md:mb-10">
-            <div>
-              <div className="md:text-[20px] text-[12px] font-bold font-RobotoMono">
-                {projectName}
-              </div>
-              {role && (
-                <div className="text-[10px] text-gray-400 font-RobotoMono md:text-[12px]">
-                  {role}
-                </div>
-              )}
+        <div
+          className={clsx(
+            "flex flex-wrap gap-x-4 gap-y-2 font-RobotoMono",
+            "text-[10px] md:text-[14px]",
+            "text-[#dbdbdb] lg:text-inherit"
+          )}
+        >
+          {tags.map((tag) => (
+            <div key={tag} className="text-center">
+              {tag}
             </div>
-
-            {link && (
-              <a href={link} target="_blank" rel="noopener noreferrer">
-                <Exit />
-              </a>
-            )}
-
-            {androidLink && (
-              <a
-                href={androidLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Android />
-              </a>
-            )}
-
-            {iosLink && (
-              <a
-                href={iosLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mb-[0.5px]"
-              >
-                <Ios />
-              </a>
-            )}
-          </div>
-
-          <div className="md:text-[15px] text-[10px] font-RobotoMono md:mb-10 mb-3 text-[#dbdbdb]">
-            {description}
-          </div>
-
-          <div className="flex space-x-4 md:text-[14px] text-[10px] font-RobotoMono flex-wrap">
-            {tags.map((tag) => (
-              <div key={tag} className="mb-2 text-center text-[#dbdbdb]">
-                {tag}
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </div>
