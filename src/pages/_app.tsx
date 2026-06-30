@@ -7,20 +7,20 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Hasnain Ali - Providing Full-Stack Development Services</title>
+        <title>Hasnain Ali — Senior Full-Stack Engineer</title>
         <meta
           name="description"
-          content="Providing Full-Stack Development Services"
+          content="Senior Full-Stack Engineer specializing in SaaS platforms, AI-integrated products, and mobile apps with React, Next.js, and React Native."
         />
 
         {/* OG */}
         <meta
           property="og:title"
-          content="Hasnain Ali - Providing Full-Stack Development Services"
+          content="Hasnain Ali — Senior Full-Stack Engineer"
         />
         <meta
           property="og:description"
-          content="Providing Full-Stack Development Services"
+          content="Senior Full-Stack Engineer specializing in SaaS platforms, AI-integrated products, and mobile apps with React, Next.js, and React Native."
         />
         <meta property="og:image" content="/metadata-image.png" />
 
@@ -28,11 +28,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Hasnain Ali - Providing Full-Stack Development Services"
+          content="Hasnain Ali — Senior Full-Stack Engineer"
         />
         <meta
           name="twitter:description"
-          content="Providing Full-Stack Development Services"
+          content="Senior Full-Stack Engineer specializing in SaaS platforms, AI-integrated products, and mobile apps with React, Next.js, and React Native."
         />
         <meta name="twitter:image" content="/metadata-image.png" />
 

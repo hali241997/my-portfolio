@@ -19,7 +19,11 @@ const Hero: FC = () => {
   const downArrow = useRef<HTMLButtonElement>(null);
 
   const handleGetInTouch = useCallback(() => {
-    window.open(constants.whatsappLink, "_blank");
+    window.open(constants.whatsappLink, "_blank", "noopener,noreferrer");
+  }, []);
+
+  const handleDownloadResume = useCallback(() => {
+    window.open(constants.resumeLink, "_blank", "noopener,noreferrer");
   }, []);
 
   const handleDownArrowClick = useCallback(() => {
@@ -77,14 +81,34 @@ const Hero: FC = () => {
               className="cursor-pointer"
               href={constants.githubLink}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <GithubLine />
             </a>
 
             <a
               className="cursor-pointer"
+              href={constants.linkedInLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInLine />
+            </a>
+
+            <a
+              className="cursor-pointer"
+              href={constants.whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsappLine />
+            </a>
+
+            <a
+              className="cursor-pointer"
               href={constants.fiverrLink}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FiverrLine />
             </a>
@@ -93,24 +117,9 @@ const Hero: FC = () => {
               className="cursor-pointer"
               href={constants.upworkLink}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <UpworkLine />
-            </a>
-
-            <a
-              className="cursor-pointer"
-              href={constants.whatsappLink}
-              target="_blank"
-            >
-              <WhatsappLine />
-            </a>
-
-            <a
-              className="cursor-pointer"
-              href={constants.linkedInLink}
-              target="_blank"
-            >
-              <LinkedInLine />
             </a>
 
             <div className="lg:h-[50px] md:h-[200px] h-[150px] w-[1px] flex self-center bg-bluePrimary" />
@@ -123,28 +132,28 @@ const Hero: FC = () => {
                   Hello,
                   <br />I am <span className="text-bluePrimary">Hasnain</span>,
                   <br />
-                  Full-Stack Engineer
+                  Senior Full-Stack Engineer
                 </div>
 
                 <div className="mt-4 text-center text-gray-400 font-RobotoMono md:text-left">
-                  Designing and developing{" "}
-                  <span className="text-bluePrimary">Mobile</span> and{" "}
-                  <span className="text-bluePrimary">Web</span> solutions that
-                  work for you
+                  I build{" "}
+                  <span className="text-bluePrimary">SaaS platforms</span>,{" "}
+                  <span className="text-bluePrimary">AI-integrated products</span>
+                  , and mobile apps with React, Next.js, and React Native.
                 </div>
 
-                <div className="flex self-center lg:self-start">
-                  <Button
-                    classes="mt-12 normal-case"
-                    onClick={handleGetInTouch}
-                  >
+                <div className="flex flex-col gap-4 self-center mt-12 sm:flex-row lg:self-start">
+                  <Button classes="normal-case" onClick={handleGetInTouch}>
                     Let&apos;s get in touch!
+                  </Button>
+                  <Button classes="normal-case" onClick={handleDownloadResume}>
+                    Download Resume
                   </Button>
                 </div>
               </div>
 
               <img
-                src="/images/hero.png"
+                src="/images/me-1.png"
                 alt="author"
                 className="object-cover w-[160px] h-[160px] mb-12 lg:mb-0 md:w-[250px] md:h-[250px] rounded-full shadow-[0px_0px_60px_0px_rgba(25,78,251,0.4)]"
               />
@@ -154,7 +163,11 @@ const Hero: FC = () => {
           <div className="flex flex-col space-y-10">
             <div className="lg:h-[70px] md:h-[230px] h-[165px] w-[1px] flex self-center bg-bluePrimary" />
 
-            <a href={constants.mailToLink} target="_blank">
+            <a
+              href={constants.mailToLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MyEmail />
             </a>
 
